@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2013 SEARCH Group, Incorporated. 
+  
+  See the NOTICE file distributed with  this work for additional information 
+  regarding copyright ownership.  SEARCH Group Inc. licenses this file to You
+  under the Apache License, Version 2.0 (the "License"); you may not use this 
+  file except in compliance with the License.  You may obtain a copy of the 
+  License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS, 
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nij.gov/IEPD/Extensions/InformationAccessDenial/1.0" xmlns:iad="http://nij.gov/IEPD/Extensions/InformationAccessDenial/1.0" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:s="http://niem.gov/niem/structures/2.0"
+	xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" elementFormDefault="qualified">
+		<xsd:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="NIEM_2.1/structures/2.0/structures.xsd" />
+	<xsd:element name="InformationAccessDenial" type="iad:InformationAccessDenialType">
+		<xsd:annotation>
+			<xsd:documentation>An explanation of a persons inability to access
+				requested information</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="InformationAccessDenialType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for an explanation of a persons
+				inability to access requested information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="iad:InformationAccessDenialIndicator" />
+					<xsd:element ref="iad:InformationAccessDenyingSystemNameText" />
+					<xsd:element ref="iad:InformationAccessDenialReasonText"
+						minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="InformationAccessDenialIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>True if a user request access to a system is
+				denied access, false otherwise.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="InformationAccessDenyingSystemNameText"
+		type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The name of the system that has denied access.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="InformationAccessDenialReasonText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>An explanation about why access was denied.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

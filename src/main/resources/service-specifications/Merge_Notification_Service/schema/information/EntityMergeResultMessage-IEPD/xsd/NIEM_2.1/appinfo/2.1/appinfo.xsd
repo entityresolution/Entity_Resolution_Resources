@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2013 SEARCH Group, Incorporated. 
+  
+  See the NOTICE file distributed with  this work for additional information 
+  regarding copyright ownership.  SEARCH Group Inc. licenses this file to You
+  under the Apache License, Version 2.0 (the "License"); you may not use this 
+  file except in compliance with the License.  You may obtain a copy of the 
+  License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS, 
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<xsd:schema 
+    targetNamespace="http://niem.gov/niem/appinfo/2.1" 
+    version="1"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation>This appinfo schema provides support for augmented types and augmented elements in NIEM domain schemas.  It was written to work in tandem with the NIEM appinfo v2.0 schema.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="AugmentedTypeIndicator" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation>The AugmentedTypeIndicator may be applied to any NIEM-conformant type.  A type that occurs in a NIEM domain and that uses an augmentation element must have an AugmentedTypeIndicator with a true value.  No other type should have a true value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AugmentedElementIndicator" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation>The AugmentedElementIndicator may be applied to any NIEM-conformant element.  An element that occurs in a NIEM domain and that has a type that is an augmented type should have a true value.  No other elements should have a true value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>
