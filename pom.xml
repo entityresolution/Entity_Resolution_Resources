@@ -22,7 +22,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gov.nij.bundles.shared</groupId>
 	<artifactId>Entity_Resolution_Resources</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>NIJ :: Entity_Resolution_Resources :: Shared</name>
 	<packaging>bundle</packaging>
 
