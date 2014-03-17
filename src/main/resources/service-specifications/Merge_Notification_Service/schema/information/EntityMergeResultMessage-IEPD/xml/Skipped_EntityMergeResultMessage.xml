@@ -40,5 +40,5 @@
       </ext:MergeQuality>
     </ext:MergedRecord>
   </exc:MergedRecords>
-  <exc:EntityResolutionPerformedIndicator>false</exc:EntityResolutionPerformedIndicator>
+  <exc:RecordLimitExceededIndicator>true</exc:RecordLimitExceededIndicator>
 </exc:EntityMergeResultMessage>

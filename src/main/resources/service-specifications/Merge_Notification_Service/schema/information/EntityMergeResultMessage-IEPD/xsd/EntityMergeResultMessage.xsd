@@ -32,10 +32,8 @@
 						ref="exc:MergedRecords" />
 					<xsd:element maxOccurs="1" minOccurs="0"
 						ref="exc:SearchResultsMetadataCollection" />
-					<xsd:element ref="exc:EntityResolutionPerformedIndicator"
-						minOccurs="0" maxOccurs="1" />
 					<xsd:element maxOccurs="1" minOccurs="1"
-						ref="exc:RecordLimitExceeded" />
+						ref="exc:RecordLimitExceededIndicator" />
 
 				</xsd:sequence>
 			</xsd:extension>
@@ -61,15 +59,7 @@
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="SearchResultsMetadataCollection" type="ext:SearchResultsMetadataCollectionType" />
-	<xsd:element name="EntityResolutionPerformedIndicator"
-		type="xsd:boolean">
-		<xsd:annotation>
-			<xsd:documentation>True when the contents of this message are a
-				result of entity resolution, false when entity resolution was not
-				performed on the contents of this message.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:element name="RecordLimitExceeded" type="xsd:boolean">
+	<xsd:element name="RecordLimitExceededIndicator" type="xsd:boolean">
 		<xsd:annotation>
 			<xsd:documentation>An indicator of whether ER was skipped due to
 				exceeding the input record limit.</xsd:documentation>
