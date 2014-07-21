@@ -10,10 +10,10 @@
 	targetNamespace="http://nij.gov/Services/WSDL/EntityResolutionService/1.0">
     <wsdl:types>
         <xsd:schema>
-            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMatchRequestMessage/1.0" schemaLocation="../information/xsd/EntityMatchRequestMessage.xsd"/>
+            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMatchRequestMessage/1.0" schemaLocation="../../artifacts/service_model/information_model/EntityMergeResultMessage-IEPD/xsd/EntityMatchRequestMessage.xsd"/>
         </xsd:schema>
         <xsd:schema>
-            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeRequestMessage/1.0" schemaLocation="../information/xsd/EntityMergeRequestMessage.xsd"/>
+            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeRequestMessage/1.0" schemaLocation="../../artifacts/service_model/information_model/EntityMergeResultMessage-IEPD/xsd/EntityMergeRequestMessage.xsd"/>
         </xsd:schema>
     </wsdl:types>
     <wsdl:message name="EntityMergeRequestMessage">

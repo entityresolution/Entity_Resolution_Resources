@@ -13,7 +13,7 @@
 		location="./GFIPMSystemToSystem.wsdl" />
     <wsdl:types>
         <xsd:schema>
-            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeResultMessage/1.0" schemaLocation="../information/xsd/EntityMergeResultMessage.xsd"/>
+            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeResultMessage/1.0" schemaLocation="../../artifacts/service_model/information_model/EntityMergeResultMessage-IEPD/xsd/EntityMergeResultMessage.xsd"/>
         </xsd:schema>
     </wsdl:types>
     <wsdl:message name="EntityMergeResultMessage">
