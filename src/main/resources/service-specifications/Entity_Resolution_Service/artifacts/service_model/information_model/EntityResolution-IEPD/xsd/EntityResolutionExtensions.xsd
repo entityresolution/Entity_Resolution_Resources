@@ -24,7 +24,7 @@
 	</xsd:complexType>
 	<xsd:element name="AttributeParameterCategory" abstract="true">
 		<xsd:annotation>
-			<xsd:documentation>The type of entity attribute parameters that are used for entity resolution analysis.</xsd:documentation>
+			<xsd:documentation>A data concept for information about entity attribute parameters that are used for entity resolution analysis.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="SimmetricsAttributeParameter" type="Q2:SimmetricsAttributeParameterType" substitutionGroup="Q2:AttributeParameterCategory">

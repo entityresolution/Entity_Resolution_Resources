@@ -105,8 +105,7 @@
 	</xsd:complexType>
 	<xsd:element name="MergeQualityCategory" abstract="true">
 		<xsd:annotation>
-			<xsd:documentation>The information about an entity attribute that
-				serves as matching criteria for the merge.</xsd:documentation>
+			<xsd:documentation>A data concept for information about an entity attribute that serves as matching criteria for the merge.</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="StringDistanceStatistics" type="ext:StringDistanceStatisticsType" substitutionGroup="ext:MergeQualityCategory">
