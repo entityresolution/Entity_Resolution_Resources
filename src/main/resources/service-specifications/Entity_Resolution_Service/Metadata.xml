@@ -22,7 +22,11 @@
 			<gra:RealWorldEffectDescriptionText>Assists investigators in building a complete entity profile based on entity records from multiple justice systems.</gra:RealWorldEffectDescriptionText>
 			<gra:RealWorldEffectDescriptionText>Provides investigators with additional entity information that could lead to criminal apprehension.</gra:RealWorldEffectDescriptionText>
 		</gra:ServiceRealWorldEffects>
-		<gra:SecurityClassificationText>The information exchanged by this service is considered Sensitive but Unclassified (SBU). As a result the service can be assigned a security classification of SBU.</gra:SecurityClassificationText>
+		<gra:SecurityClassificationText>The intermediary capability of the ERS is based on the premise that the ERS would be implementated in the following scenarios: (1) in an Intermediary container between a Search Results Aggregation Service and a Merge Notification Service, (2) in an Intermediary container between a Query Request Service and a Merge Notification service [see section 5.2.2, Figures 3,4].  Note that in both scenarios all services would reside in the same intermediary environment/container.  In both scenarios, the ERS would receive a message from a service and pass a message to the Merge Notification Service all within the same intermediary container.  The Entity Resolution Service would not receive or send any message outside the intermediary.   Based on this premise, the ERS does not provide direct access to any information from outside the Intermediary, nor does the underlying capability store any information.  Therefore, in the above scenarios the ERS has no security classification or security requirements.  
+
+In addition, implementation of the ERS could occur in a scenario where the service receives a message and/or sends a message outside it’s container environment.  In this scenario, security requirements may apply.
+
+Therefore, the ERS could be classified as ‘unsecured’ or ‘secured’ depending on the implementation scenario.</gra:SecurityClassificationText>
 		<gra:IEPDReferences>
 			<gra:IEPDReference>
 				<gra:IEPDName>EntityResolutionRequest-IEPD</gra:IEPDName>
@@ -78,20 +82,20 @@
 		</gra:URIDetails>
 		<gra:ServiceActions>
 			<gra:ServiceAction>
-				<gra:ActionName>SubmitEntityMatch</gra:ActionName>
+				<gra:ActionName>Submit-Entity-Match</gra:ActionName>
 				<gra:ActionPurpose>A request that the match function be performed on a set of record attributes</gra:ActionPurpose>
 				<gra:MessageExchangePattern>Fire-Forget</gra:MessageExchangePattern>
 			</gra:ServiceAction>
 			<gra:ServiceAction>
-				<gra:ActionName>SubmitEntityMerge</gra:ActionName>
+				<gra:ActionName>Submit-Entity-Merge</gra:ActionName>
 				<gra:ActionPurpose>A request that both a match and merge function be performed on a set of record attributes</gra:ActionPurpose>
 				<gra:MessageExchangePattern>Fire-Forget</gra:MessageExchangePattern>
 			</gra:ServiceAction>
 		</gra:ServiceActions>
 		<gra:ServiceInteractionProfiles>
 			<gra:ServiceInteractionProfile>
-				<gra:SIPName>GRA SIP_WS</gra:SIPName>
-				<gra:SIPVersion>1.3</gra:SIPVersion>
+				<gra:SIPName>GRA SIP_RSWS</gra:SIPName>
+				<gra:SIPVersion>1.1</gra:SIPVersion>
 			</gra:ServiceInteractionProfile>
 		</gra:ServiceInteractionProfiles>
 		<gra:SecurityImplementedIndicator>false</gra:SecurityImplementedIndicator>
