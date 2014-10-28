@@ -13,7 +13,7 @@
 		location="./GFIPMSystemToSystem.wsdl" />
     <wsdl:types>
         <xsd:schema>
-            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeResultMessage/1.0" schemaLocation="../information/xsd/EntityMergeResultMessage.xsd"/>
+            <xsd:import namespace="http://nij.gov/IEPD/Exchange/EntityMergeResultMessage/1.0" schemaLocation="../../artifacts/service_model/information_model/EntityMergeResultMessage-IEPD/xsd/EntityMergeResultMessage.xsd"/>
         </xsd:schema>
     </wsdl:types>
     <wsdl:message name="EntityMergeResultMessage">
@@ -36,7 +36,7 @@
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="Merge-Notification-ServiceService">
-        <wsdl:port name="Merge-Notification-Service" binding="tns:Merge-Notification-ServiceSOAPBinding">
+        <wsdl:port name="Merge-Notification-Service" binding="tns:Merge-Notification-Secure-ServiceSOAPBinding">
             <soap:address location="http://localhost"/>
         </wsdl:port>
         <wsdl:port binding="tns:Merge-Notification-Secure-ServiceSOAPBinding"
